@@ -11,6 +11,10 @@ class TriangleTestCase(unittest.TestCase):
     def test_area_float_base_and_height(self):
         self.assertAlmostEqual(area(2.5, 2.5), 3.125)
         
+    def test_area_big_base_and_height(self):
+        self.assertEqual(area(100000, 10), 500000)
+    
+    
     def test_perimeter_right_triangle(self):
         self.assertEqual(perimeter(3, 4, 5), 12)
         
@@ -19,5 +23,6 @@ class TriangleTestCase(unittest.TestCase):
         
     def test_perimeter_float_sides(self):
         self.assertEqual(perimeter(1.5, 2, 2.5), 6)
- 
-
+    
+    def test_perimeter_big_sides(self):
+        self.assertEqual(perimeter(300000, 400000, 500000), 1200000)

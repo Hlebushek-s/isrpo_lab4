@@ -14,6 +14,10 @@ class CircleTestCase(unittest.TestCase):
         
     def test_area_float_radius(self):
         self.assertAlmostEqual(area(0.5), math.pi / 4)
+    
+    def test_area_big_radius(self):
+        self.assertEqual(area(100000), math.pi * 10000000000)
+        
         
     def test_perimeter_radius_one(self):
         self.assertAlmostEqual(perimeter(1), 2 * math.pi)
@@ -26,5 +30,7 @@ class CircleTestCase(unittest.TestCase):
         
     def test_perimeter_float_radius(self):
         self.assertAlmostEqual(perimeter(0.5), math.pi)
- 
-
+    
+    def test_perimeter_big_radius(self):
+        self.assertEqual(perimeter(100000), math.pi * 100000 * 2)
+        
